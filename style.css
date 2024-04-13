@@ -1,0 +1,120 @@
+body {
+    background-image: url(bgs.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+:root{
+--background-color: rgb(5, 5, 5);
+--background-color1: rgb(6, 42, 139);
+--text-color1: rgb(255, 217, 0); 
+--text-color2: rgb(253, 12, 12); 
+}
+body {
+font-family: 'Courier New', Courier, monospace;
+text-align: center;
+margin:0;
+box-sizing: border-box;
+background-color: var(--background-color);
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.scoreboard {
+font-family: 'share tech mono',monospace;
+font-size: 1.3rem;
+text-size-adjust: 1rem;
+display: flex;
+justify-content: space-around;
+align-items: baseline;
+margin-bottom: 20px;
+color: #f8bf02;   
+flex-direction: row;
+width: 98.5%;
+height: 50%;
+border-radius: 10px;
+background-color: var(--background-color1);
+border: 10px solid rgb(77, 75, 75);
+text-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
+}
+.timer {
+margin: 20px;
+color: rgb(231, 12, 12);
+font-family: "Digital-7",Arial, sans-serif;
+font-size: 6rem;
+}
+.shotClock {
+font-family: "Digital-7",Arial,sans-serif;
+font-size: 4rem;
+margin: 20px;
+color: rgb(17, 250, 9);
+text-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
+}
+.button {
+padding: 10px 20px;
+font-style: unset;
+font-size: 1rem;
+margin: 3px;
+cursor: pointer;
+background-color: #050464;
+color: rgb(242, 240, 250);
+border: none;
+border-radius: 5px;
+text-shadow: 0 0 20px rgb(21, 51, 223),  0 0 20px rgba(10, 175, 230, 0);
+}
+.scoreboard-shadow {
+font-family: 'Digital-7',monospace;
+font-size: 1rem;
+text-align: center;
+position: absolute;
+z-index: 1;
+top: 50%;
+left: 52.5%;
+transform: translate(-50%, -50%);
+margin: 0;
+color: rgb(175, 9, 9);
+}
+.text {
+text-transform: uppercase;
+color: var(--text-color2);
+}
+button:hover {
+background-color: rgb(109, 151, 70);
+}
+body {
+background: #0f3854;
+background: radial-gradient(ellipse at center,  #0a2e38  0%, #000000 70%);
+background-size: 100%;
+}
+p {
+margin: 0;
+padding: 0;
+}
+.team-name {
+color: rgb(7, 248, 248);
+font-size: 35px;
+text-transform: uppercase;
+margin-bottom: 10px;
+cursor: pointer;
+font-family: 'share tech mono',monospace;
+text-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
+}
+.buttonC {
+font-size: 12px;
+padding: 4px 4px;
+border: none;
+border-radius: 5px;
+}
+.scoreB {
+font-family: "Digital-7",Arial, Helvetica, sans-serif;
+font-size: 4.5rem;
+size: 5rem;
+}
+.setTime {
+    color: aliceblue;
+    size: 3rem;
+}
+.quarter {
+    color: aliceblue;
+    size: 1000px;
+}

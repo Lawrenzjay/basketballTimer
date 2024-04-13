@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=3.0">
+<title>Basketball Countdown Timer</title>
+<link rel="icon" href="logo.webp" type="image">
+<link rel="stylesheet" href="style.css"></link>
+</head>
+<body>
+<div class="scoreboard">
+  <div>
+    <div class="team-name" id="team1Name" onclick="editTeamName('team1')">Team 1</div>
+    <div class="scoreB" id="homeScore">0</div>
+    <button class="button" onclick="addScore('home')">+</button>
+    <button class="button" onclick="subtractScore('home')">-</button>
+  </div>
+  <div class="quarter">
+    <label for="quarter"><h2>PERIOD</h2></label>
+    <select id="quarter" onchange="changeQuarter()">
+      <option value="1">1ST PERIOD</option>
+      <option value="2">2ND PERIOD</option>
+      <option value="3">3RD PERIOD</option>
+      <option value="4">4TH PERIOD</option>
+      <option value="5">1ST OT</option>
+      <option value="4">2ND OT</option>
+      <option value="6">3RD OT</option>
+      <option value="7">4TH OT</option>
+    </select>
+  </div>
+  <div>
+    <div class="team-name" id="team2Name" onclick="editTeamName('team2')">Team 2</div>
+    <div class="scoreB" id="awayScore">0</div>
+    <button class="button" onclick="addScore('away')">+</button>
+    <button class="button" onclick="subtractScore('away')">-</button>
+  </div>
+</div>
+  <div class="setTime">
+    <input type="number" id="minutesInput" min="0" max="99" step="1" value="10">
+    <input type="number" id="secondsInput" min="0" max="59" step="1" value="0">
+    <button class="buttonC" onclick="setCountdownTime()">Set Timer</button>
+  </div>  
+<div class="timer">
+  <div id="countdownTimer">10:00</div>
+  <button class="button" id="pauseCountdown" onclick="pauseCountdown()">Pause</button>
+  <button class="button" id="continueCountdown" onclick="continueCountdown()">Continue</button>
+  <button class="button" id="stopCountdown" onclick="playBuzzer()">Time out</button>
+  <button class="button" id="reset-btn" onclick="resetScores()">Reset score</button>
+
+  <audio id="buzzerSound">
+    <source src="buzzer.m4a" type="audio/mpeg">
+  </audio>
+  <audio id="buzzer2Sound">
+    <source src="buzzer3.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="buzzer3Sound">
+    <source src="vibrate-[AudioTrimmer.com].mp3" type="audio/mpeg">
+  </audio>
+  <audio id="buzzer4Sound">
+    <source src="buzzer.m4a" type="audio/mpeg">
+  </audio>
+  <script> 
+    function editTeamName(team) {
+      var newName = prompt("Change name for " + team + ":");
+      if (newName !== null && newName.trim() !== "") {
+      document.getElementById(team + "Name").textContent = newName;
+      }
+    }
+    function playBuzzer() {
+      let buzzerSound = document.getElementById('buzzerSound');
+      buzzerSound.play();
+      clearInterval(countdownInterval);
+      document.getElementById('pauseCountdown').disabled = true;
+      document.getElementById('continueCountdown').disabled = false;
+      clearInterval(shotClockInterval);
+      document.getElementById('pauseShotClock').disabled = true;
+      document.getElementById('continueShotClock').disabled = false;
+    }
+  </script>
+</div>
+<div class="shotClock">
+  <div id="shotClock">24</div>
+  <button class="button" onclick="resetShotClock()">Reset</button>
+  <button class="button" onclick="resetShotClock14()">Reset to 14</button>
+</div>
+<script src="time.js"></script>
+</body>
+</html>
