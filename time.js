@@ -23,11 +23,11 @@ function startCountdown() {
         let buzzer4sound = document.getElementById('buzzer4Sound');
         buzzer4sound.play();
     if (homeScore > awayScore) {
-      alert('WINNER TEAM 1 WITH THE SCORE OF:'+ homeScore)
+      alert('END OF THE QUARTER WITH FAVOR OF TEAM 1 WITH THE SCORE OF:'+ homeScore)
     } else if (awayScore > homeScore) {
-      alert('WINNER TEAM 2 WITH THE SCORE OF:'+ awayScore)
+      alert('END OF THE QUARTER WITH FAVOR OF TEAM 2 WITH THE SCORE OF:'+ awayScore)
     } else {
-      alert('TIE GAME IT WILL GO TO OVERTIME WITH THE SCORE OF:'+ homeScore)
+      alert('TIE GAME WITH THE SCORE OF:'+ homeScore)
     }
     }
   }, 1000);
